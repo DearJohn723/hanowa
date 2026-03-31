@@ -392,15 +392,15 @@ export default function App() {
                             </div>
                             <div className="grid grid-cols-3 gap-4">
                               <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">三級 (自己)</p>
+                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">三級 ({rates.level3}%)</p>
                                 <p className="text-lg font-medium">{formatCurrency(p.l3Seller.self)}</p>
                               </div>
                               <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">二級 (上層)</p>
+                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">二級 ({rates.level2}%)</p>
                                 <p className="text-lg font-medium">{formatCurrency(p.l3Seller.parent)}</p>
                               </div>
                               <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">一級 (頂層)</p>
+                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">一級 ({rates.level1}%)</p>
                                 <p className="text-lg font-medium">{formatCurrency(p.l3Seller.grandparent)}</p>
                               </div>
                             </div>
@@ -414,11 +414,11 @@ export default function App() {
                             </div>
                             <div className="grid grid-cols-3 gap-4">
                               <div className="col-span-2 bg-blue-50 p-4 rounded-2xl border border-blue-100">
-                                <p className="text-[9px] font-bold text-blue-400 uppercase mb-1">二級 (自己 - 領取二+三級)</p>
+                                <p className="text-[9px] font-bold text-blue-400 uppercase mb-1">二級 (自己 - 領取 {rates.level2 + rates.level3}%)</p>
                                 <p className="text-lg font-medium text-blue-900">{formatCurrency(p.l2Seller.self)}</p>
                               </div>
                               <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">一級 (上層)</p>
+                                <p className="text-[9px] font-bold text-gray-400 uppercase mb-1">一級 ({rates.level1}%)</p>
                                 <p className="text-lg font-medium">{formatCurrency(p.l2Seller.parent)}</p>
                               </div>
                             </div>
@@ -431,7 +431,7 @@ export default function App() {
                               <span className="text-[10px] text-gray-400">總獎金: {formatCurrency(p.totalPool)}</span>
                             </div>
                             <div className="bg-green-50 p-4 rounded-2xl border border-green-100">
-                              <p className="text-[9px] font-bold text-green-600 uppercase mb-1">一級 (自己 - 領取全額獎金)</p>
+                              <p className="text-[9px] font-bold text-green-600 uppercase mb-1">一級 (自己 - 領取全額 {rates.level1 + rates.level2 + rates.level3}%)</p>
                               <p className="text-lg font-medium text-green-900">{formatCurrency(p.l1Seller.self)}</p>
                             </div>
                           </div>
