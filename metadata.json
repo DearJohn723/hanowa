@@ -1,0 +1,5 @@
+{
+  "name": "私人音樂廳分銷商分潤試算器",
+  "description": "計算三層代理商體系的獎金分潤，支持自定義比例、成本計算及銷售預估。",
+  "requestFramePermissions": []
+}
